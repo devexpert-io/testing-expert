@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Testing Expert"
 include(":app")
+include(":appTestShared")
