@@ -37,4 +37,6 @@ android {
 dependencies {
     implementation(project(":app"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
+    implementation("junit:junit:4.13.2")
 }
