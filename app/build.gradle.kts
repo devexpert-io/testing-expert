@@ -83,4 +83,7 @@ dependencies {
     kspAndroidTest("com.google.dagger:hilt-android-compiler:2.52")
     androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
     androidTestImplementation("app.cash.turbine:turbine:1.2.0")
+
+    debugImplementation("androidx.fragment:fragment-testing-manifest:1.8.5")
+    androidTestImplementation("androidx.fragment:fragment-testing:1.8.5")
 }
