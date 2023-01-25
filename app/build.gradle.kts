@@ -86,7 +86,7 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.navigation:navigation-compose:2.8.4")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
-
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
     testImplementation(project(":appTestShared"))
     testImplementation("junit:junit:4.13.2")
