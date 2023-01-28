@@ -21,6 +21,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "com.devexperto.testingexpert.di.HiltTestRunner"
+        testInstrumentationRunnerArguments.putAll(mapOf("useTestStorageService" to "true"))
 
         vectorDrawables {
             useSupportLibrary = true
@@ -122,4 +123,6 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    androidTestUtil("androidx.test.services:test-services:1.5.0")
 }
