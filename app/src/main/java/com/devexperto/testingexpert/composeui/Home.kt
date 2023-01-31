@@ -7,23 +7,32 @@ import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavDestination.Companion.hasRoute
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.devexperto.testingexpert.R
 import com.devexperto.testingexpert.composeui.navigation.NavItem
 import com.devexperto.testingexpert.composeui.navigation.Navigation
+import com.devexperto.testingexpert.composeui.navigation.TopBar
+import com.devexperto.testingexpert.composeui.settings.SettingsViewModel
+import com.devexperto.testingexpert.composeui.settings.Theme
 
 @Composable
-fun Home() {
-    val navController = rememberNavController()
+fun Home(vm: SettingsViewModel = hiltViewModel()) {
+    val theme by vm.theme.collectAsState(initial = Theme.SAME_AS_SYSTEM)
+    Home(theme)
+}
+
+@Composable
+fun Home(theme: Theme) {
+Screen(theme) {    val navController = rememberNavController()
 
     Scaffold(
         topBar = { TopBar() },
@@ -37,11 +46,6 @@ fun Home() {
     }
 }
 
-@Composable
-fun TopBar() {
-    TopAppBar(
-        title = { Text(text = stringResource(id = R.string.app_name)) }
-    )
 }
 
 @Composable
