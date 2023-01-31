@@ -111,6 +111,8 @@ dependencies {
     testImplementation("org.robolectric:robolectric:4.14.1")
     testImplementation("androidx.compose.ui:ui-test-junit4")
     testImplementation("androidx.test.espresso:espresso-core:3.6.1")
+    testImplementation("com.google.dagger:hilt-android-testing:2.52")
+    kspTest("com.google.dagger:hilt-android-compiler:2.52")
 
     androidTestImplementation(project(":appTestShared"))
     androidTestImplementation("androidx.test.ext:junit-ktx:1.2.1")

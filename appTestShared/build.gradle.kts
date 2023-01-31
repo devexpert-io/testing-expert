@@ -43,4 +43,12 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-test-junit4")
     implementation("androidx.test.ext:junit-ktx:1.2.1")
+    implementation("androidx.test.espresso:espresso-contrib:3.6.1")
+    implementation("androidx.test.espresso:espresso-idling-resource:3.6.1")
+    implementation("androidx.test:rules:1.6.1")
+    implementation("com.google.dagger:hilt-android-testing:2.52")
+    implementation("com.squareup.okhttp3:mockwebserver:4.12.0")
+    implementation("app.cash.turbine:turbine:1.2.0")
+    implementation("io.mockk:mockk-android:1.13.13")
+    implementation("androidx.room:room-runtime:2.6.1")
 }
