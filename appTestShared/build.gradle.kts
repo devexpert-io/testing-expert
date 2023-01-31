@@ -39,4 +39,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
     implementation("junit:junit:4.13.2")
+    implementation(platform("androidx.compose:compose-bom:2024.11.00"))
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-test-junit4")
+    implementation("androidx.test.ext:junit-ktx:1.2.1")
 }
