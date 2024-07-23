@@ -8,6 +8,7 @@ plugins {
     id("com.google.dagger.hilt.android")
     id("org.jetbrains.kotlin.plugin.compose")
     id("org.jetbrains.kotlin.plugin.serialization")
+    id("com.android.compose.screenshot")
 }
 
 android {
@@ -67,6 +68,8 @@ android {
             isIncludeAndroidResources = true
         }
     }
+
+    experimentalProperties["android.experimental.enableScreenshotTest"] = true
 }
 
 dependencies {
@@ -135,4 +138,6 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     androidTestUtil("androidx.test.services:test-services:1.5.0")
+
+    screenshotTestImplementation("androidx.compose.ui:ui-tooling")
 }
